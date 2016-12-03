@@ -1,8 +1,8 @@
 {
   "name": "node-bits",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NodeBits aims to provide you with an easy way to get a site up and running quickly.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "nodemon src/index.js --exec babel-node",
     "compile": "node tools/build.js",

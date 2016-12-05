@@ -48,7 +48,7 @@ A bit is a building block of an app. Below are the existing bits I know about, b
 
 ## Current Bits
 ### [NodeBits-Express](https://github.com/jgretz/node-bits-express)
-The express bit wraps the popular express package for hosting web apps. It exposes
+The express bit wraps the popular express package for hosting web apps.
 
 ### [NodeBits-Code](https://github.com/jgretz/node-bits-code)
 

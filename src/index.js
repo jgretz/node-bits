@@ -1,33 +1,20 @@
 import _ from 'lodash';
 
-export default (allBits = []) => {
-  const config = {};
-
-  // database
-  const loadDatabase = _.flow([
-    (bits) => _.filter(bits, b => b.loadDatabase),
-    (bits) => _.flatMap(bits, b => b.loadDatabase(config)),
+const compile = (config, allBits, hook, property) => {
+  const func = _.flow([
+    (bits) => _.filter(bits, b => b[hook]),
+    (bits) => _.flatMap(bits, b => b[hook](config)),
   ]);
-  config.database = loadDatabase(allBits);
+  config[property] = func(allBits);
 
-  // schema
-  const loadSchema = _.flow([
-    (bits) => _.filter(bits, b => b.loadSchema),
-    (bits) => _.flatMap(bits, b => b.loadSchema(config)),
-  ]);
-  config.schema = loadSchema(allBits);
+  return config;
+};
 
-  // routes
-  const loadRoutes = _.flow([
-    (bits) => _.filter(bits, b => b.loadRoutes),
-    (bits) => _.flatMap(bits, b => b.loadRoutes(config)),
-  ]);
-  config.routes = loadRoutes(allBits);
-
-  // server
-  const loadServer = _.flow([
-    (bits) => _.filter(bits, b => b.loadServer),
-    (bits) => _.flatMap(bits, b => b.loadServer(config)),
-  ]);
-  loadServer(allBits);
+export default (bits = []) => {
+  _.flow([
+    (config) => compile(config, bits, 'initializeDatabase', 'database'),
+    (config) => compile(config, bits, 'loadSchema', 'schema'),
+    (config) => compile(config, bits, 'loadRoutes', 'routes'),
+    (config) => compile(config, bits, 'initializeServer', 'server'),
+  ])({});
 };

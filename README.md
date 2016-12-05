@@ -41,18 +41,21 @@ nodeBits([
 ## What is a "Bit"
 A bit is a building block of an app. Below are the existing bits I know about, but you can easily make your own. Each bit is given an opportunity to do something in the following hooks:
 
-* loadDatabase
+* initializeDatabase
 * loadSchema
 * loadRoutes
-* loadServer
+* initializeServer
 
 ## Current Bits
-### NodeBits-Express
+### [NodeBits-Express](https://github.com/jgretz/node-bits-express)
+The express bit wraps the popular express package for hosting web apps.
 
-### NodeBits-Code
+### [NodeBits-Code](https://github.com/jgretz/node-bits-code)
 
 ### NodeBits-Mongo
 
+### NodeBits-Postgre
+
 ### NodeBits-Admin
 
-### NodeBits-Schema
+### NodeBits-Dynamic-Schema

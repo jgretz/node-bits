@@ -57,9 +57,15 @@ The code bit allows you to use friendly code to express your schemas and routes.
 
 Visit the [repo](https://github.com/jgretz/node-bits-code) to find out more specifics.
 
-### NodeBits-Mongo
+### [NodeBits-Mongo](https://github.com/jgretz/node-bits-mongo)
+The mongo bit allows you to connect to a mongo database and expose this connection to other bits. For example, combining this with the "code bit" will allow you to define your schema in files, and have a fully functional rest setup up with a mongo backend simply by connecting the two bits.
 
-### NodeBits-Postgre
+Visit the [repo](https://github.com/jgretz/node-bits-mongo) to find out more specifics.
+
+### [NodeBits-Postgre](https://github.com/jgretz/node-bits-postgre)
+The postgre bit allows you to connect to a postgre database and expose this connection to other bits. For example, combining this with the "code bit" will allow you to define your schema in files, and have a fully functional rest setup up with a postgre backend simply by connecting the two bits.
+
+Visit the [repo](https://github.com/jgretz/node-bits-postgre) to find out more specifics.
 
 ### NodeBits-Admin
 

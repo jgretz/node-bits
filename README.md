@@ -25,16 +25,20 @@ These bits are then provided to the boot loader like:
 
 ```
 import nodeBits from 'node-bits';
-import nodeBitsCode from 'node-bits-code';
 import nodeBitsExpress from 'node-bits-express';
+import nodeBitsCode from 'node-bits-code';
+import nodeBitsRest from 'node-bits-rest';
 
 nodeBits([
-  nodeBitsCode({
-    path: `${__dirname}/src`,
-  }),
   nodeBitsExpress({
-    port: 3000,
-  })
+    port: 4000,
+  }),
+  nodeBitsCode({
+    path: `${__dirname}`,
+  }),
+  nodeBitsRest({
+    prefix: 'api',
+  }),
 ]);
 ```
 
@@ -57,15 +61,26 @@ The code bit allows you to use friendly code to express your schemas and routes.
 
 Visit the [repo](https://github.com/jgretz/node-bits-code) to find out more specifics.
 
+### [NodeBits-Rest](https://github.com/jgretz/node-bits-rest)
+The rest bit builds and exposes rest services for every schema object defined by bits during loadSchema.
+
+Visit the [repo](https://github.com/jgretz/node-bits-rest) to find out more specifics.
+
 ### [NodeBits-Mongo](https://github.com/jgretz/node-bits-mongo)
-The mongo bit allows you to connect to a mongo database and expose this connection to other bits. For example, combining this with the "code bit" will allow you to define your schema in files, and have a fully functional rest setup up with a mongo backend simply by connecting the two bits.
+The mongo bit allows you to connect to a mongo database and expose this connection to other bits.
+
+For example, combining this bit with the "code bit" and the "rest bit" will allow you to define your schema in files, and have a fully functional rest setup up with a mongo backend simply by connecting the a couple bits.
 
 Visit the [repo](https://github.com/jgretz/node-bits-mongo) to find out more specifics.
 
 ### [NodeBits-Postgre](https://github.com/jgretz/node-bits-postgre)
-The postgre bit allows you to connect to a postgre database and expose this connection to other bits. For example, combining this with the "code bit" will allow you to define your schema in files, and have a fully functional rest setup up with a postgre backend simply by connecting the two bits.
+The postgre bit allows you to connect to a postgre database and expose this connection to other bits.
+
+For example, combining this bit with the "code bit" and the "rest bit" will allow you to define your schema in files, and have a fully functional rest setup up with a postgre backend simply by connecting the a couple bits.
 
 Visit the [repo](https://github.com/jgretz/node-bits-postgre) to find out more specifics.
+
+### [NodeBits-SPA](https://github.com/jgretz/node-bits-spa)
 
 ### NodeBits-Admin
 

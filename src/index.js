@@ -19,3 +19,6 @@ export default (bits = []) => {
     (config) => compile(config, bits, 'initializeServer', 'server'),
   ])({});
 };
+
+// other exports
+export * from './constants';

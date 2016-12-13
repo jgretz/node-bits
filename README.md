@@ -81,6 +81,7 @@ For example, combining this bit with the "code bit" and the "rest bit" will allo
 Visit the [repo](https://github.com/jgretz/node-bits-sql) to find out more specifics.
 
 ### [NodeBits-SPA](https://github.com/jgretz/node-bits-spa)
+The spa bit allows you to quickly configure hosting a single page app at a specified url
 
 ### NodeBits-Admin
 

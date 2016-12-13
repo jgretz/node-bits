@@ -73,12 +73,12 @@ For example, combining this bit with the "code bit" and the "rest bit" will allo
 
 Visit the [repo](https://github.com/jgretz/node-bits-mongo) to find out more specifics.
 
-### [NodeBits-Postgre](https://github.com/jgretz/node-bits-postgre)
-The postgre bit allows you to connect to a postgre database and expose this connection to other bits.
+### [NodeBits-Sql](https://github.com/jgretz/node-bits-sql)
+The sql bit allows you to connect to a sql database and expose this connection to other bits.
 
-For example, combining this bit with the "code bit" and the "rest bit" will allow you to define your schema in files, and have a fully functional rest setup up with a postgre backend simply by connecting the a couple bits.
+For example, combining this bit with the "code bit" and the "rest bit" will allow you to define your schema in files, and have a fully functional rest setup up with a sql backend simply by connecting the a couple bits.
 
-Visit the [repo](https://github.com/jgretz/node-bits-postgre) to find out more specifics.
+Visit the [repo](https://github.com/jgretz/node-bits-sql) to find out more specifics.
 
 ### [NodeBits-SPA](https://github.com/jgretz/node-bits-spa)
 

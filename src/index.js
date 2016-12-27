@@ -6,13 +6,35 @@ const compile = (config, allBits, hook, property, post) => {
     (bits) => _.flatMap(bits, b => b[hook](config)),
     (bits) => post ? post(bits) : bits,
   ]);
-  config[property] = func(allBits);
 
-  return config;
+  const value = func(allBits);
+
+  if (!value) {
+    return config;
+  }
+
+  if (property) {
+    config[property] = value;
+    return config;
+  }
+
+  if (_.isArray(value)) {
+    const reduced = _.reduce(value, (obj, prop) => ({ ...obj, ...prop }));
+    return {
+      ...config,
+      ...reduced,
+    };
+  }
+
+  return {
+    ...config,
+    ...value,
+  };
 };
 
 export default (bits = []) => {
   _.flow([
+    (config) => compile(config, bits, 'initialize', null),
     (config) => compile(config, bits, 'initializeDatabase', 'database', (bits) => _.head(bits)),
     (config) => compile(config, bits, 'loadSchema', 'schema'),
     (config) => compile(config, bits, 'loadRoutes', 'routes'),

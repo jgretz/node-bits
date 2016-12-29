@@ -1,6 +1,6 @@
 {
   "name": "node-bits",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "NodeBits aims to provide you with an easy way to get a site up and running quickly.",
   "main": "lib/index.js",
   "scripts": {

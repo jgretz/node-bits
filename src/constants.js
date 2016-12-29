@@ -8,3 +8,32 @@ export const STRING = 'STRING';
 export const PASSWORD = 'PASSWORD';
 export const DATE = 'DATE';
 export const BOOLEAN = 'BOOLEAN';
+
+// Database Actions
+export const QUERY = 'QUERY';
+export const INSERT = 'INSERT';
+export const UPDATE = 'UPDATE';
+
+// Stages
+export const BEFORE = 'BEFORE';
+export const AFTER = 'AFTER';
+
+// configure routes
+export const BEFORE_CONFIGURE_ROUTES = 'beforeConfigureRoutes';
+export const AFTER_CONFIGURE_ROUTES = 'afterConfigureRoutes';
+
+// http verbs
+export const GET = 'get';
+export const POST = 'post';
+export const PUT = 'put';
+export const DELETE = 'delete';
+
+export const VERBS = [GET, POST, PUT, DELETE];
+
+// misc
+export const CLASS = 'class';
+export const FUNC = 'func';
+export const OBJ = 'obj';
+
+export const DEFAULT = 'default';
+export const INDEX = 'index';

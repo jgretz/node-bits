@@ -1,6 +1,6 @@
 {
   "name": "node-bits",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "NodeBits aims to provide you with an easy way to get a site up and running quickly.",
   "main": "lib/index.js",
   "scripts": {
@@ -19,11 +19,11 @@
   },
   "homepage": "https://github.com/jgretz/node-bits#readme",
   "dependencies": {
-    "lodash": "^4.17.2"
+    "lodash": "^4.17.3"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
-    "babel-core": "^6.18.2",
+    "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
     "babel-plugin-module-resolver": "^2.2.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",

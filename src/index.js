@@ -44,3 +44,4 @@ export default (bits = []) => {
 
 // other exports
 export * from './constants';
+export * from './log';

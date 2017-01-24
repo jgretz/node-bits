@@ -14,6 +14,10 @@ export const QUERY = 'QUERY';
 export const INSERT = 'INSERT';
 export const UPDATE = 'UPDATE';
 
+// Database Relation Types
+export const ONE_TO_ONE = 'ONE_TO_ONE';
+export const ONE_TO_MANY = 'ONE_TO_MANY';
+
 // Stages
 export const BEFORE = 'BEFORE';
 export const AFTER = 'AFTER';

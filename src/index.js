@@ -46,3 +46,4 @@ export default (bits = []) => {
 export * from './constants';
 export * from './log';
 export * from './execute_series';
+export * from './timer';

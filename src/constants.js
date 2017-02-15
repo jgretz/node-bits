@@ -17,6 +17,7 @@ export const UPDATE = 'UPDATE';
 // Database Relation Types
 export const ONE_TO_ONE = 'ONE_TO_ONE';
 export const ONE_TO_MANY = 'ONE_TO_MANY';
+export const MANY_TO_ONE = 'MANY_TO_ONE';
 export const MANY_TO_MANY = 'MANY_TO_MANY';
 
 // Stages

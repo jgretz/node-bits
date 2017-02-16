@@ -8,6 +8,7 @@ export const STRING = 'STRING';
 export const PASSWORD = 'PASSWORD';
 export const DATE = 'DATE';
 export const BOOLEAN = 'BOOLEAN';
+export const TEXT = 'TEXT';
 
 // Database Actions
 export const QUERY = 'QUERY';

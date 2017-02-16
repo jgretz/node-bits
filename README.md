@@ -1,5 +1,5 @@
 # NodeBits
-NodeBits aims to provide you with an easy way to get a site up and running quickly. Since every site has different goals, requirements, and tech - NodeBits is built as a series a pluggable 'bits' that you can quickly combine into a powerful foundation for your site.
+NodeBits is a node microframework with the aim of providing "just enough" magic to enable you to quickly and painlessly build your api / site. Since every site has different goals, requirements, and tech - NodeBits is built as a series a pluggable 'bits' that you can quickly combine into a powerful foundation for your site.
 
 ## Getting Started
 The NodeBits package itself is the boot loader. You supply it with the bits and it puts them together. Each bit is intentionally focused on subset of the whole. To cut down on dependency bloat, each bit is distributed as an independent npm package - you only include what you need.
@@ -45,6 +45,7 @@ nodeBits([
 ## What is a "bit"
 A bit is a building block of an app. Below are the existing bits I know about, but you can easily make your own. Each bit is given an opportunity to do something in the following hooks:
 
+* initialize
 * initializeDatabase
 * loadSchema
 * loadRoutes
@@ -80,9 +81,17 @@ For example, combining this bit with the "code bit" and the "rest bit" will allo
 
 Visit the [repo](https://github.com/jgretz/node-bits-sql) to find out more specifics.
 
+### [NodeBits-Password](https://github.com/jgretz/node-bits-password)
+The password bit provides an implementation of password hashing which can be attached to either mongo or sql database. By simply, defining your field as type PASSWORD, this bit will hash any value saved to that field.
+
+Visit the [repo](https://github.com/jgretz/node-bits-password) to find out more specifics.
+
 ### [NodeBits-SPA](https://github.com/jgretz/node-bits-spa)
-The spa bit allows you to quickly configure hosting a single page app at a specified url
+The spa bit allows you to quickly configure hosting a single page app at a specified url.
 
-### NodeBits-Admin
+Visit the [repo](https://github.com/jgretz/node-bits-spa) to find out more specifics.
 
-### NodeBits-Dynamic-Schema
+### [NodeBits-Jwt](https://github.com/jgretz/node-bits-jwt)
+The jwt bit provides an implementation of user based JWT to secure your api and site. It also allows you to restrict access down to the route / verb level by role.
+
+Visit the [repo](https://github.com/jgretz/node-bits-jwt) to find out more specifics.

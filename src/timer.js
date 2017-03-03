@@ -1,5 +1,5 @@
 import Timer from 'timer-machine-node';
-import { log } from './log';
+import {log} from './log';
 
 const DEFAULT_TIMER = 'DEFAULT_TIMER';
 

@@ -6,12 +6,15 @@ const execute = (arr, index, resolve, reject) => {
 
   const task = arr[index];
   task()
-    .then(() => { execute(arr, index + 1, resolve, reject); })
-    .catch((err) => { reject(err); });
+    .then(() => {
+      execute(arr, index + 1, resolve, reject);
+    })
+    .catch(err => {
+      reject(err);
+    });
 };
 
-export const executeSeries = (arr) => {
-  return new Promise((resolve, reject) => {
+export const executeSeries = arr =>
+  new Promise((resolve, reject) => {
     execute(arr, 0, resolve, reject);
   });
-};

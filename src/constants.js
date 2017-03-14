@@ -21,6 +21,10 @@ export const ONE_TO_MANY = 'ONE_TO_MANY';
 export const MANY_TO_ONE = 'MANY_TO_ONE';
 export const MANY_TO_MANY = 'MANY_TO_MANY';
 
+// Directions
+export const ASC = 'asc';
+export const DESC = 'desc';
+
 // Stages
 export const BEFORE = 'BEFORE';
 export const AFTER = 'AFTER';

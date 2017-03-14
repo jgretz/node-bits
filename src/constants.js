@@ -49,3 +49,7 @@ export const OBJ = 'obj';
 
 export const DEFAULT = 'default';
 export const INDEX = 'index';
+
+export const COUNT = 'COUNT';
+export const START = 'START';
+export const MAX = 'MAX';

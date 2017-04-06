@@ -1,8 +1,10 @@
+import _ from 'lodash';
 import chalk from 'chalk';
 
 /* eslint-disable */
 const doLog = (color, args) => {
-  let message = Array.prototype.slice.call(args, 0).join(' ');
+  let message = _.map(args, a => a instanceof Error ? a.stack : a).join(' ');
+
   if (color) {
     message = color(message);
   }

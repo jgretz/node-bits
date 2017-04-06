@@ -1,5 +1,6 @@
 import chalk from 'chalk';
 
+/* eslint-disable */
 const doLog = (color, args) => {
   let message = Array.prototype.slice.call(args, 0).join(' ');
   if (color) {

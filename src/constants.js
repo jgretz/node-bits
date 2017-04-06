@@ -8,6 +8,7 @@ export const STRING = 'STRING';
 export const PASSWORD = 'PASSWORD';
 export const DATE = 'DATE';
 export const BOOLEAN = 'BOOLEAN';
+export const TEXT = 'TEXT';
 
 // Database Actions
 export const QUERY = 'QUERY';
@@ -17,7 +18,12 @@ export const UPDATE = 'UPDATE';
 // Database Relation Types
 export const ONE_TO_ONE = 'ONE_TO_ONE';
 export const ONE_TO_MANY = 'ONE_TO_MANY';
+export const MANY_TO_ONE = 'MANY_TO_ONE';
 export const MANY_TO_MANY = 'MANY_TO_MANY';
+
+// Directions
+export const ASC = 'asc';
+export const DESC = 'desc';
 
 // Stages
 export const BEFORE = 'BEFORE';
@@ -32,6 +38,7 @@ export const GET = 'get';
 export const POST = 'post';
 export const PUT = 'put';
 export const DELETE = 'delete';
+export const OPTIONS = 'options';
 
 export const VERBS = [GET, POST, PUT, DELETE];
 
@@ -42,3 +49,7 @@ export const OBJ = 'obj';
 
 export const DEFAULT = 'default';
 export const INDEX = 'index';
+
+export const COUNT = 'COUNT';
+export const START = 'START';
+export const MAX = 'MAX';

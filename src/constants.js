@@ -53,3 +53,14 @@ export const INDEX = 'index';
 export const COUNT = 'COUNT';
 export const START = 'START';
 export const MAX = 'MAX';
+
+// admin modes
+export const HIDDEN = 'HIDDEN';
+export const READ_WRITE = 'READ_WRITE';
+export const READ_ONLY = 'READ_ONLY';
+
+// admin model edit types
+export const LIST = 'LIST';
+export const MEDIA = 'MEDIA';
+export const RICH_TEXT = 'RICH_TEXT';
+export const TIME = 'TIME';

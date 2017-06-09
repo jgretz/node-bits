@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import mergeSchema from './util/merge_schema';
 
 const compile = (config, allBits, hook, property, post) => {
   const func = _.flow([
@@ -32,11 +33,19 @@ const compile = (config, allBits, hook, property, post) => {
   };
 };
 
+const syncSchema = (config, bits) => {
+  const merged = mergeSchema(bits);
+  if (config.database) {
+    config.database.synchronizeSchema(merged);
+  }
+  return [merged];
+};
+
 export default (bits = []) => {
   _.flow([
     config => compile(config, bits, 'initialize', null),
     config => compile(config, bits, 'initializeDatabase', 'database', bits => _.head(bits)),
-    config => compile(config, bits, 'loadSchema', 'schema'),
+    config => compile(config, bits, 'loadSchema', 'schema', bits => syncSchema(config, bits)),
     config => compile(config, bits, 'loadRoutes', 'routes'),
     config => compile(config, bits, 'initializeServer', 'server'),
   ])({});

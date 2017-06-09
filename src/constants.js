@@ -34,11 +34,11 @@ export const BEFORE_CONFIGURE_ROUTES = 'beforeConfigureRoutes';
 export const AFTER_CONFIGURE_ROUTES = 'afterConfigureRoutes';
 
 // http verbs
-export const GET = 'get';
-export const POST = 'post';
-export const PUT = 'put';
-export const DELETE = 'delete';
-export const OPTIONS = 'options';
+export const GET = 'GET';
+export const POST = 'POST';
+export const PUT = 'PUT';
+export const DELETE = 'DELETE';
+export const OPTIONS = 'OPTIONS';
 
 export const VERBS = [GET, POST, PUT, DELETE];
 

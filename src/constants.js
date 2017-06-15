@@ -29,9 +29,11 @@ export const DESC = 'desc';
 export const BEFORE = 'BEFORE';
 export const AFTER = 'AFTER';
 
-// configure routes
+// routes
 export const BEFORE_CONFIGURE_ROUTES = 'beforeConfigureRoutes';
 export const AFTER_CONFIGURE_ROUTES = 'afterConfigureRoutes';
+export const BEFORE_EXECUTE_ROUTE = 'beforeExecuteRoute';
+export const AFTER_EXECUTE_ROUTE = 'afterExecuteRoute';
 
 // http verbs
 export const GET = 'GET';

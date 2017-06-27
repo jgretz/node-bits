@@ -28,13 +28,7 @@ const compile = (config, allBits, hook, property, post) => {
 };
 
 const concatMerge = (destinationArray, sourceArray) => destinationArray.concat(sourceArray);
-const reduceInit = bits => {
-  const temp = deepmerge.all(bits, {arrayMerge: concatMerge});
-
-  console.log(temp);
-
-  return temp;
-};
+const reduceInit = bits => deepmerge.all(bits, {arrayMerge: concatMerge});
 
 const syncSchema = (config, bits) => {
   const merged = mergeSchema(bits);

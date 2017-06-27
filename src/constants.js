@@ -60,6 +60,7 @@ export const MAX = 'MAX';
 export const HIDDEN = 'HIDDEN';
 export const READ_WRITE = 'READ_WRITE';
 export const READ_ONLY = 'READ_ONLY';
+export const WRITE_ONLY = 'WRITE_ONLY';
 
 // admin model edit types
 export const LIST = 'LIST';

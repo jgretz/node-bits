@@ -1,4 +1,6 @@
 import _ from 'lodash';
+import deepmerge from 'deepmerge';
+
 import mergeSchema from './util/merge_schema';
 
 const compile = (config, allBits, hook, property, post) => {
@@ -19,18 +21,19 @@ const compile = (config, allBits, hook, property, post) => {
     return config;
   }
 
-  if (_.isArray(value)) {
-    const reduced = _.reduce(value, (obj, prop) => ({...obj, ...prop}));
-    return {
-      ...config,
-      ...reduced,
-    };
-  }
-
   return {
     ...config,
     ...value,
   };
+};
+
+const concatMerge = (destinationArray, sourceArray) => destinationArray.concat(sourceArray);
+const reduceInit = bits => {
+  const temp = deepmerge.all(bits, {arrayMerge: concatMerge});
+
+  console.log(temp);
+
+  return temp;
 };
 
 const syncSchema = (config, bits) => {
@@ -43,7 +46,7 @@ const syncSchema = (config, bits) => {
 
 export default (bits = []) => {
   _.flow([
-    config => compile(config, bits, 'initialize', null),
+    config => compile(config, bits, 'initialize', null, reduceInit),
     config => compile(config, bits, 'initializeDatabase', 'database', bits => _.head(bits)),
     config => compile(config, bits, 'loadSchema', 'schema', bits => syncSchema(config, bits)),
     config => compile(config, bits, 'loadRoutes', 'routes'),

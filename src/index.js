@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import deepmerge from 'deepmerge';
 
+import {log} from './log';
 import mergeSchema from './util/merge_schema';
 
 const compile = (config, allBits, hook, property, post) => {
@@ -52,6 +53,8 @@ export default (bits = []) => {
     config => compile(config, bits, 'loadRoutes', 'routes'),
     config => compile(config, bits, 'initializeServer', 'server'),
   ])({});
+
+  log('node-bits startup complete. the server is ready and waiting ...');
 };
 
 // other exports

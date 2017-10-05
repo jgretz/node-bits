@@ -1,6 +1,6 @@
 {
   "name": "node-bits",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "node-bits is a node microframework with the aim of providing \"just enough\" magic to enable you to quickly and painlessly build your api / site.",
   "main": "lib/index.js",
   "scripts": {

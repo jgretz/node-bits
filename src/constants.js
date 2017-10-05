@@ -67,3 +67,6 @@ export const LIST = 'LIST';
 export const MEDIA = 'MEDIA';
 export const RICH_TEXT = 'RICH_TEXT';
 export const TIME = 'TIME';
+
+export const IMAGE = 'IMAGE';
+export const FILE = 'FILE';

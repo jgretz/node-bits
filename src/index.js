@@ -30,8 +30,12 @@ const compile = (config, allBits, hook, property, post) => {
 
 const concatMerge = (destinationArray, sourceArray) => destinationArray.concat(sourceArray);
 const reduceInit = bits => {
-  if (!bits || bits.length < 2) {
+  if (!bits || bits.length === 0) {
     return bits;
+  }
+
+  if (bits.length === 1) {
+    return bits[0];
   }
 
   return deepmerge.all(bits, {arrayMerge: concatMerge});

@@ -1,6 +1,6 @@
 {
   "name": "node-bits",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "description": "node-bits is a node microframework with the aim of providing \"just enough\" magic to enable you to quickly and painlessly build your api / site.",
   "main": "lib/index.js",
   "scripts": {
@@ -20,21 +20,21 @@
   "homepage": "https://github.com/jgretz/node-bits#readme",
   "keywords": "node-bits,node,microframework,server",
   "dependencies": {
-    "chalk": "^1.1.3",
-    "deepmerge": "^1.4.4",
-    "lodash": "^4.17.4",
+    "chalk": "^2.4.2",
+    "deepmerge": "^3.2.0",
+    "lodash": "^4.17.11",
     "timer-machine-node": "^1.1.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-eslint": "^7.2.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "babel-register": "^6.24.1",
-    "eslint": "^4.0.0",
-    "eslint-plugin-import": "^2.3.0",
-    "nodemon": "^1.9.2",
-    "shelljs": "^0.7.8"
+    "babel-register": "^6.26.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.3",
+    "nodemon": "^1.19.1",
+    "shelljs": "^0.8.3"
   }
 }

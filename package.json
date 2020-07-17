@@ -22,7 +22,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "deepmerge": "^3.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "timer-machine-node": "^1.1.2"
   },
   "devDependencies": {
